@@ -9,7 +9,7 @@ cd nxp-assignment
 ### 2. Install:
    composer install  
    cp .env.example .env  
-   set up mysql database
+   set up mysql database  
    php artisan key:generate  
 
 ### 3. DB:
@@ -19,8 +19,9 @@ cd nxp-assignment
 ### 4. Serve:
    php artisan serve  
 
-### 5.Please visit default page to see the seeder data.  
-You can find product id from here.
+### 5.Please visit default page to see the seeder data.    
+http://127.0.0.1:8000/  
+You can see data here.
 
 ### 6. API:
    POST /api/orders  
