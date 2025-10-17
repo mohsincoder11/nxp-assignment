@@ -31,4 +31,4 @@ cd nxp-assignment
 ### 6. Run tests:
    php artisan test
 
-### Please view PLAN.md and ARCHITECTURE.md file
+### Please view [PLAN.md](./PLAN.md) and [ARCHITECTURE.md](./ARCHITECTURE.md) files
