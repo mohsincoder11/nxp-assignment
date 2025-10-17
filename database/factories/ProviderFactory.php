@@ -3,22 +3,21 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Provider>
- */
 class ProviderFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = \App\Models\Provider::class;
+
     public function definition(): array
     {
         return [
             'name' => $this->faker->company,
             'email' => $this->faker->unique()->companyEmail,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
+   
 }

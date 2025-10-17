@@ -27,10 +27,10 @@ class OrderPolicy
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user, $providerId)
+    public function create(User $user): bool
     {
-        // If the user belongs to the same provider, allow
-        return $user->provider_id === $providerId;
+        // Only allow users with 'provider' role
+        return in_array($user->role,['provider','staff']);
     }
 
     /**

@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class Provider extends Model
 {
+    use HasFactory;
     protected $guarded = [];
     public function inventories()
     {
@@ -15,8 +18,9 @@ class Provider extends Model
     {
         return $this->hasManyThrough(Product::class, Inventory::class, 'provider_id', 'id', 'id', 'product_id');
     }
-    public function orders()
+    public function users()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(User::class);
     }
+
 }

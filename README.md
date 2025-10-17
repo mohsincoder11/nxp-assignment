@@ -9,6 +9,7 @@ cd nxp-assignment
 ### 2. Install:
    composer install  
    cp .env.example .env  
+   set up mysql database
    php artisan key:generate  
 
 ### 3. DB:
@@ -18,17 +19,21 @@ cd nxp-assignment
 ### 4. Serve:
    php artisan serve  
 
-### 5. API:
+### 5.Please visit default page to see the seeder data.  
+You can find product id from here.
+
+### 6. API:
    POST /api/orders  
    Body (JSON):  
    {  
-     "provider_id": 1,  
      "items": [  
        {"product_id": 1, "quantity": 3}  
      ]  
    }  
 
-### 6. Run tests:
-   php artisan test
+### 7. Run tests:
+   php artisan test --env=testing  
+   Note: i have used mysql for database.
+
 
 ### Please view [PLAN.md](./PLAN.md) and [ARCHITECTURE.md](./ARCHITECTURE.md) files

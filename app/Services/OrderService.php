@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Inventory;
 use App\Events\OrderPlaced;
+use App\Jobs\SendOrderPlaceEmailJob;
 use Illuminate\Support\Facades\DB;
 
 class OrderService
@@ -57,8 +58,8 @@ class OrderService
 
             $order->update(['total_amount' => $total]);
 
-            // dispatch event
-            OrderPlaced::dispatch($order);
+            // dispatch job
+            SendOrderPlaceEmailJob::dispatch($order);
 
             return $order->fresh('items.product');
         });
