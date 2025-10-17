@@ -1,18 +1,24 @@
 ## Vertical Slice: Provider places an order
 
-1. Install:
+## Getting Started
+
+### 1️. Clone the repository
+git clone https://github.com/mohsincoder11/nxp-assignment.git
+cd nxp-assignment
+
+### 2. Install:
    composer install
    cp .env.example .env
    php artisan key:generate
 
-2. DB:
+### 3. DB:
    php artisan migrate
    php artisan db:seed
 
-3. Serve:
+### 4. Serve:
    php artisan serve
 
-4. API:
+### 5. API:
    POST /api/orders
    Body (JSON):
    {
@@ -22,5 +28,7 @@
      ]
    }
 
-5. Run tests:
+### 6. Run tests:
    php artisan test
+
+### Please view PLAN.md and ARCHITECTURE.md file
