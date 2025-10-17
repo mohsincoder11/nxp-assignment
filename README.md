@@ -24,6 +24,10 @@ http://127.0.0.1:8000/
 You can see data here.
 
 ### 6. API:
+i)Login user  
+      Post /api/login  
+      Note:you can find user list on default page(http://127.0.0.1:8000) after database seeding
+ii)Order Place  
    POST /api/orders  
    Body (JSON):  
    {  
